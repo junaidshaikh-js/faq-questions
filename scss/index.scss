@@ -1,0 +1,76 @@
+// css reset
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+// variables
+$font-family: "Great Vibes", cursive;
+$secondary-font-family: "Open Sans", sans-serif;
+$clr-gold: #c59d5f;
+$clr-gray1: hsl(209, 61%, 16%);
+$clr-gray2: hsl(210, 22%, 49%);
+
+body {
+  background-color: hsl(210, 36%, 96%);
+}
+
+i {
+  color: $clr-gold;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.4s;
+
+  &:hover {
+    transform: rotate(90deg);
+  }
+}
+
+.faq-wrapper {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.faq-questions {
+  width: 80vw;
+  max-width: 600px;
+
+  header {
+    font-size: 1.8rem;
+    font-family: $font-family;
+    color: $clr-gold;
+    text-align: center;
+  }
+
+  .question {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 7px;
+    font-family: $secondary-font-family;
+    background-color: white;
+    box-shadow: 4px 4px 8px $clr-gray2;
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      color: $clr-gray1;
+    }
+
+    &__answer {
+      margin-top: 1rem;
+      padding: 0.7rem 0;
+      display: none;
+      border-top: 1px solid $clr-gray2;
+      color: $clr-gray2;
+    }
+  }
+}
